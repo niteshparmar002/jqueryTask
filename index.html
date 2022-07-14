@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        .modal-footer {
+            border-top: none;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="row mt-3 text-center">
+            <div class="col-4">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#headingModal">
+                    Heading
+                </button>
+            </div>
+
+            <div class="col-4">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#subHeadingModal">
+                    Sub Heading
+                </button>
+            </div>
+
+            <div class="col-4">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">
+                    Form
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Heading Modal -->
+    <div class="modal fade" id="headingModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Heading Modal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="" class="select-heading">
+                    <div class="modal-body">
+                        <input type="text" class="form-control" placeholder="Enter Heading" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Submit</button>
+                        <button type="button" id="hsubmit" class="btn btn-secondary"
+                            data-bs-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Sub Heading Modal -->
+    <div class="modal fade" id="subHeadingModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sub Heading Modal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="" class="select-sub-heading">
+                    <div class="modal-body">
+                        <select class="select-head" aria-label="Default select example">
+                            <option value="heading" selected disabled>--Select Heading--</option>
+                        </select>
+                        <input type="text" class="form-control mt-3" placeholder="Enter Sub Heading" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Submit</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form Modal -->
+    <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Form Modal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="" onsubmit="return false" class="select-form">
+                    <div class="modal-body">
+                        <select class="formheading" id="headings" name="formheading"
+                            aria-label="Default select example">
+                            <option value="">--Select Heading--</option>
+                        </select><br>
+
+                        <select class="subheadingform mt-3" id="nitesh" aria-label="Default select example">
+                            <option value="subheading" selected disabled>--Select Sub Heading--</option>
+                        </select>
+
+                        <select id="controlType" class="form-select mt-3" aria-label="Default select example">
+                            <option value="" selected disabled>--Select Input Type--</option>
+                            <option>button</option>
+                            <option>checkbox</option>
+                            <option>color</option>
+                            <option>date</option>
+                            <option>datetime-local</option>
+                            <option>email</option>
+                            <option>file</option>
+                            <option>hidden</option>
+                            <option>image</option>
+                            <option>month</option>
+                            <option>number</option>
+                            <option>password</option>
+                            <option>radio</option>
+                            <option>range</option>
+                            <option>reset</option>
+                            <option>search</option>
+                            <option>select</option>
+                            <option>submit</option>
+                            <option>tel</option>
+                            <option>text</option>
+                            <option>time</option>
+                            <option>url</option>
+                            <option>week</option>
+                        </select>
+
+                        <input type="text" name="" placeholder="Label" class="form-control ilabel mt-3" required>
+                        <input type="text" name="" placeholder="class" class="form-control iclass mt-3">
+                        <input type="text" name="" placeholder="id" class="form-control iid mt-3">
+                        <input type="text" name="" placeholder="placeholder" class="form-control iplaceholder mt-3">
+                        <input type="text" name="" placeholder="value" class="form-control ivalue mt-3">
+                        <input type="text" name="" placeholder="name" class="form-control iname mt-3">
+                        <input type="text" name="" placeholder="action" class="form-control iaction mt-3">
+                        <input type="text" name="" placeholder="options" class="form-control ioption mt-3">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Submit</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+<main id="mainContainer">
+
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</html>
